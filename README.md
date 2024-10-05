@@ -10,7 +10,8 @@ O Dockerfile fornecido indica que você está trabalhando com uma aplicação No
 
 Próximos Passos: Construindo e Empurrando a Imagem para o Docker Hub
 
-1 - Construir a Imagem:
+1 - Construir a Imagem: 
+---
 
 Bash
 docker build -t minha-conta/minha-aplicacao .
@@ -19,7 +20,7 @@ docker build -t minha-conta/minha-aplicacao .
 .: Indica que o Dockerfile está localizado no diretório atual.
 
 2 - Logar no Docker Hub:
-
+---
 Bash
 docker login
 
@@ -27,7 +28,7 @@ docker login
 Você será solicitado a inserir seu nome de usuário e senha do Docker Hub.
 
 3 - Empurrar a Imagem para o Docker Hub:
-
+---
 Bash
 docker push minha-conta/minha-aplicacao
 
@@ -57,7 +58,7 @@ GitHub Actions: Integre o Docker com o GitHub Actions para automatizar a constru
 Jenkins: Configure um pipeline no Jenkins para automatizar o processo de construção e envio da imagem.
 Exemplo Completo com GitHub Actions:
 
----
+'''
 YAML
 
 name: Build and Push Docker Image
@@ -79,7 +80,7 @@ jobs:
         run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
       - name: Push the Docker image
         run: docker push my-user/my-image
----
+'''
 
 Substitua:
 
