@@ -58,7 +58,7 @@ GitHub Actions: Integre o Docker com o GitHub Actions para automatizar a constru
 Jenkins: Configure um pipeline no Jenkins para automatizar o processo de construção e envio da imagem.
 Exemplo Completo com GitHub Actions:
 
-´´´
+````
 YAML
 
 name: Build and Push Docker Image
@@ -80,7 +80,7 @@ jobs:
         run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
       - name: Push the Docker image
         run: docker push my-user/my-image 
-´´´
+````
 
 Substitua:
 
